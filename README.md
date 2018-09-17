@@ -1,9 +1,6 @@
 yii2-double-model-gii
 =====================
 
-[![Latest Stable Version](https://poser.pugx.org/claudejanz/yii2-mygii/v/stable.svg)](https://packagist.org/packages/claudejanz/yii2-mygii) [![Total Downloads](https://poser.pugx.org/claudejanz/yii2-mygii/downloads.svg)](https://packagist.org/packages/claudejanz/yii2-mygii) [![Latest Unstable Version](https://poser.pugx.org/claudejanz/yii2-mygii/v/unstable.svg)](https://packagist.org/packages/claudejanz/yii2-mygii) [![License](https://poser.pugx.org/claudejanz/yii2-mygii/license.svg)](https://packagist.org/packages/claudejanz/yii2-mygii)
-
-
 This generator generates two ActiveRecord class for the specified database table. An empty one you can extend and a Base one which is the same as the original model generatior.
 
 ## Installation
@@ -13,18 +10,20 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-$ php composer.phar require "claudejanz/yii2-mygii": "dev-master"
+$ php composer.phar require --dev "prowebcraft/yii2-double-model": "dev-master"
 ```
 
 or add
 
 ```
-"claudejanz/yii2-mygii": "dev-master"
+"prowebcraft/yii2-double-model": "dev-master"
 ```
 
 to the ```require``` section of your `composer.json` file.
 
 ## Usage
+
+By Default Extension comes with Bootstrap file. Just install it. If you need manual installation, follow these steps:
 
 ```php
 //if your gii modules configuration looks like below:
@@ -42,12 +41,14 @@ to the ```require``` section of your `composer.json` file.
             'class' => 'yii\gii\Module',
             'generators' => [
                 'doubleModel' => [
-                    'class' => 'claudejanz\mygii\generators\model\Generator',
+                    'class' => 'prowebcraft\yii2doublemodel\generators\model\Generator',
                 ],
                 'kartik-crud' => [
-                    'class'     => 'claudejanz\mygii\generators\kcrud\Generator',
+                    'class'     => 'prowebcraft\yii2doublemodel\generators\kcrud\Generator',
                 ],
             ],
         ],
     ],
 ```
+
+Open URL https://YOUR-YII2-INSTANCE/gii/doubleModel in browser and follow instructions
