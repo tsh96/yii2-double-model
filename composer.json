@@ -1,8 +1,8 @@
 {
-    "name": "claudejanz/yii2-mygii",
-    "description": "Gii Generator for double model generation",
-    "keywords": ["yii2", "gii", "crud"],
-    "homepage": "https://github.com/claudejanz/yii2-mygii",
+    "name": "prowebcraft/yii2-double-model",
+    "description": "Yii2 - Gii Double Model Generator",
+    "keywords": ["yii2", "gii", "crud", "double-model"],
+    "homepage": "https://github.com/prowebcraft/yii2-double-model",
     "type": "yii2-extension",
     "license": "BSD-4-Clause",
     "authors": [
@@ -10,6 +10,11 @@
             "name": "Claude Janz",
             "email": "claudejanz@gmail.com",
             "homepage": "http://www.klod.ch"
+        },
+        {
+            "name": "Andrey Mistulov",
+            "email": "prowebcraft@gmail.com",
+            "homepage": "http://prowebcraft.ru"
         }
     ],
     "require": {
@@ -25,10 +30,10 @@
     },
     "autoload": {
         "psr-4": {
-            "claudejanz\\mygii\\": ""
+            "prowebcraft\\yii2doublemodel\\": ""
         }
     },
     "extra": {
-        "bootstrap": "claudejanz\\mygii\\Bootstrap"
+        "bootstrap": "prowebcraft\\yii2doublemodel\\Bootstrap"
     }
 }

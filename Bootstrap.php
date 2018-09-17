@@ -1,11 +1,10 @@
 <?php
 
 
-namespace claudejanz\mygii;
+namespace prowebcraft\yii2doublemodel;
 
 use yii\base\Application;
 use yii\base\BootstrapInterface;
-
 
 /**
  * Class Bootstrap
