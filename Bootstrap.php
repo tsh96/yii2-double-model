@@ -8,8 +8,6 @@ use yii\base\BootstrapInterface;
 
 /**
  * Class Bootstrap
- * @package claudejanz\mygii
- * @author Claude Janz  
  */
 class Bootstrap implements BootstrapInterface
 {
@@ -23,7 +21,7 @@ class Bootstrap implements BootstrapInterface
     {
         if ($app->hasModule('gii')) {
             if (!isset($app->getModule('gii')->generators['doubleModel'])) {
-                $app->getModule('gii')->generators['doubleModel'] = 'claudejanz\mygii\generators\model\Generator';
+                $app->getModule('gii')->generators['doubleModel'] = 'prowebcraft\yii2doublemodel\generators\model\Generator';
             }
         }
     }
