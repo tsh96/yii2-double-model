@@ -108,10 +108,10 @@ class <?= $className ?>Base extends <?= '\\' . ltrim($generator->baseClass, '\\'
         $paramName = Inflector::variablize($column->name);
     ?>
 /**
-    * Set <?=$column->name;?> property.<?=($column->comment ? "\n    * {$column->comment}" : '') ."\n"?>
-    * @param <?="{$column->phpType} \${$paramName}\n"?>
-    * @return $this
-    */
+     * Set <?=$column->name;?> property.<?=($column->comment ? "\n    * {$column->comment}" : '') ."\n"?>
+     * @param <?="{$column->phpType} \${$paramName}\n"?>
+     * @return $this
+     */
     public function set<?=$methodName;?>($<?=$paramName;?>)
     {
         $this-><?=$column->name;?> = $<?=$paramName;?>;
@@ -119,9 +119,9 @@ class <?= $className ?>Base extends <?= '\\' . ltrim($generator->baseClass, '\\'
     }
 
     /**
-    * Get <?=$column->name;?> property.<?=($column->comment ? "\n    * {$column->comment}" : '') ."\n"?>
-    * @return <?=$column->phpType."\n";?>
-    */
+     * Get <?=$column->name;?> property.<?=($column->comment ? "\n    * {$column->comment}" : '') ."\n"?>
+     * @return <?=$column->phpType."\n";?>
+     */
     public function get<?=$methodName;?>()
     {
         return $this-><?=$column->name .";\n"?>
@@ -138,4 +138,5 @@ class <?= $className ?>Base extends <?= '\\' . ltrim($generator->baseClass, '\\'
         <?= $relation[0] . "\n" ?>
     }
 <?php endforeach; ?>
+
 }
