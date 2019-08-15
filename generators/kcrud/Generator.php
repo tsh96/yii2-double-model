@@ -6,7 +6,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace prowebcraft\yii2doublemodel\generators\kcrud;
+namespace tsh96\yii2doublemodel\generators\kcrud;
 
 use Yii;
 use yii\db\ActiveRecord;
