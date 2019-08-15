@@ -1,7 +1,7 @@
 <?php
 
 
-namespace prowebcraft\yii2doublemodel;
+namespace tsh96\yii2doublemodel;
 
 use yii\base\Application;
 use yii\base\BootstrapInterface;
