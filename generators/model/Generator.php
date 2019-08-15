@@ -232,6 +232,7 @@ class Generator extends \yii\gii\Generator
             }
             switch ($column->type) {
                 case Schema::TYPE_SMALLINT:
+                case Schema::TYPE_TINYINT:
                 case Schema::TYPE_INTEGER:
                 case Schema::TYPE_BIGINT:
                     $types['integer'][] = $column->name;
