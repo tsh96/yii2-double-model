@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace prowebcraft\yii2doublemodel\generators\model;
+namespace tsh96\yii2doublemodel\generators\model;
 
 use Yii;
 use yii\db\ActiveRecord;
