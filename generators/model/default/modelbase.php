@@ -101,45 +101,6 @@ class <?= $className ?>Base extends <?= '\\' . ltrim($generator->baseClass, '\\'
         <?php endforeach; ?>
 ];
     }
-
-    <?php
-    foreach ($tableSchema->columns as $column):
-        $methodName = Inflector::camelize($column->name);
-        $paramName = Inflector::variablize($column->name);
-        $variable = '$'.$paramName;
-        $type = $column->dbType;
-    ?>
-/**
-     * Set <?=$column->name;?> property.<?=($column->comment ? "\n    * {$column->comment}" : '') ."\n"?>
-     * @param <?="{$column->phpType} {$variable}\n"?>
-     * @return $this
-     */
-    public function set<?=$methodName;?>($<?=$paramName;?>)
-    {
-        <?php
-        if ($type == 'datetime' || $type == 'date') {
-            echo '$time = is_string('.$variable.') ? strtotime('.$variable.') : is_numeric('.$variable.') ? '.$variable.' : time();' . "\n\t\t";
-            if ($type == 'datetime') {
-                echo $variable . ' = date("Y-m-d H:i:s", $time);' . "\n\t\t";
-            }
-            if ($type == 'date') {
-                echo $variable . ' = date("Y-m-d", $time);' . "\n\t\t";
-            }
-        }
-        ?>$this-><?=$column->name;?> = <?=$variable;?>;
-        return $this;
-    }
-
-    /**
-     * Get <?=$column->name;?> property.<?=($column->comment ? "\n    * {$column->comment}" : '') ."\n"?>
-     * @return <?=$column->phpType."\n";?>
-     */
-    public function get<?=$methodName;?>()
-    {
-        return $this-><?=$column->name .";\n"?>
-    }
-
-    <?php endforeach; ?>
     <?php foreach ($relations as $name => $relation): ?>
 
     /**
