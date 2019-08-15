@@ -21,7 +21,7 @@ class Bootstrap implements BootstrapInterface
     {
         if ($app->hasModule('gii')) {
             if (!isset($app->getModule('gii')->generators['doubleModel'])) {
-                $app->getModule('gii')->generators['doubleModel'] = 'prowebcraft\yii2doublemodel\generators\model\Generator';
+                $app->getModule('gii')->generators['doubleModel'] = 'tsh96\yii2doublemodel\generators\model\Generator';
             }
         }
     }
