@@ -1,8 +1,8 @@
 {
-    "name": "prowebcraft/yii2-double-model",
+    "name": "tsh96/yii2-double-model",
     "description": "Yii2 - Gii Double Model Generator",
     "keywords": ["yii2", "gii", "crud", "double-model"],
-    "homepage": "https://github.com/prowebcraft/yii2-double-model",
+    "homepage": "https://github.com/tsh96/yii2-double-model",
     "type": "yii2-extension",
     "license": "BSD-4-Clause",
     "authors": [
@@ -15,6 +15,9 @@
             "name": "Andrey Mistulov",
             "email": "prowebcraft@gmail.com",
             "homepage": "http://prowebcraft.ru"
+        },
+        {
+            "name": "Tsh96",
         }
     ],
     "require": {
@@ -30,10 +33,10 @@
     },
     "autoload": {
         "psr-4": {
-            "prowebcraft\\yii2doublemodel\\": ""
+            "tsh96\\yii2doublemodel\\": ""
         }
     },
     "extra": {
-        "bootstrap": "prowebcraft\\yii2doublemodel\\Bootstrap"
+        "bootstrap": "tsh96\\yii2doublemodel\\Bootstrap"
     }
 }
